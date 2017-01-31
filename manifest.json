@@ -1,0 +1,36 @@
+{
+  "name": "Bliss",
+  "version": "2.0",
+  "manifest_version": 2,
+  "description": "Минималистичное оформление для новых вкладок.",
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "<all_urls>",
+    "storage",
+    "unlimitedStorage",
+    "topSites",
+    "chrome://favicon/"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "scripts": [
+      "providers.js",
+      "background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' https://yandex.ru https://*.yandex.ru https://*.nationalgeographic.com https://*.500px.com https://*.ya.ru https://*.500px.org https://*.gstatic.com https://*.flickr.com https://*.staticflickr.com https://*.bing.com; object-src 'self'",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}
